@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
-public class Pizza {
-    String mName;
+public abstract class Pizza {
+    String mName = "abstract Pizza";
     String mDough;
     String mSauce;
     ArrayList mToppings = new ArrayList();
@@ -30,5 +30,9 @@ public class Pizza {
 
     public String getName() {
         return mName;
+    }
+
+    void setName(String name) {
+        mName = name;
     }
 }
