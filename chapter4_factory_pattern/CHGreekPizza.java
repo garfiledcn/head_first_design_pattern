@@ -1,6 +1,6 @@
 public class CHGreekPizza extends Pizza{
     CHGreekPizza() {
-        mName = "ChicagoGreekPizza";
+        mName = "Chicago Style GreekPizza";
         mDough = "Extra Thick Crust Dough";
         mSauce = "Hoisin Sauce";
 

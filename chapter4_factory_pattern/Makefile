@@ -15,7 +15,7 @@ SOURCE := CHCheesePizza.java \
 	NYStylePepperoniPizza.java \
 	CHPepperoniPizza.java \
 	PizzaStore.java \
-	SimplePizzaFactory.java
+	ConstValue.java
 
 FLAG:=-Xlint:unchecked
 FLAG+=-d $(OUT)
