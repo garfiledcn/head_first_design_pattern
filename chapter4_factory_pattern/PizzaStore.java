@@ -1,13 +1,7 @@
-class PizzaStore{
-
-    SimplePizzaFactory mPizzaFactory;
-
-    public PizzaStore (SimplePizzaFactory factory) {
-        mPizzaFactory = factory;
-    }
+public abstract class PizzaStore{
 
     public Pizza orderPizza(String type) {
-        Pizza pizza = mPizzaFactory.createPizza(type);
+        Pizza pizza = createPizza(type);
 
         pizza.prepare();
         pizza.bake();
@@ -15,4 +9,6 @@ class PizzaStore{
         pizza.box();
         return pizza;
     }
+
+    abstract Pizza createPizza(String type);
 }

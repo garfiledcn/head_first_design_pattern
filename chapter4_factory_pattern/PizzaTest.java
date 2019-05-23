@@ -1,6 +1,9 @@
 class PizzaTest {
     public static void main(String[] args) {
-        PizzaStore pizzaStore = new PizzaStore(new SimplePizzaFactory());
-        pizzaStore.orderPizza(args[0]);
+        PizzaStore nypizzaStore = new NYPizzaStore();
+        nypizzaStore.orderPizza(args[0]);
+
+        PizzaStore chpizzaStore = new CHPizzaStore();
+        chpizzaStore.orderPizza(args[0]);
     }
 }
