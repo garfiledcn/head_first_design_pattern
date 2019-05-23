@@ -1,5 +1,7 @@
 public class CHClamPizza extends Pizza {
     CHClamPizza () {
-        mName = "ChicagoClamPizza";
+        mName = "Chicago Style Deep Dish ClamPizza";
+        mDough = "Extra Thick Crust Dough";
+        mSauce = "Garlic Tomato Sauce";
     }
 }
