@@ -1,3 +1,5 @@
+OUT:=out 
+
 JAVAC  := javac
 SOURCE := CHCheesePizza.java \
 	CHGreekPizza.java \
@@ -15,7 +17,8 @@ SOURCE := CHCheesePizza.java \
 	PizzaStore.java \
 	SimplePizzaFactory.java
 
-
+FLAG:=-Xlint:unchecked
+FLAG+=-d $(OUT)
 
 all: $(SOURCE)
-	$(JAVAC) -d out PizzaTest.java
+	$(JAVAC) $(FLAG) PizzaTest.java
