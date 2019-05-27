@@ -1,11 +1,15 @@
 class PizzaTest {
     public static void main(String[] args) {
-        PizzaStore nypizzaStore = new NYPizzaStore();
-        Pizza pizza = nypizzaStore.orderPizza(args[0]);
-        System.out.println("ordered a " + pizza.getName()+"\n");
+		String[] pizzaTypeStrings = {ConstValue.PIZZA_TYPE_CHEESE, ConstValue.PIZZA_TYPE_CLAM, ConstValue.PIZZA_TYPE_GREEK, ConstValue.PIZZA_TYPE_PEPPERONI, ConstValue.PIZZA_TYPE_VEGGIE};
 
-        PizzaStore chpizzaStore = new CHPizzaStore();
-        pizza = chpizzaStore.orderPizza(args[0]);
-        System.out.println("ordered a " + pizza.getName()+"\n");
+        for (String type : pizzaTypeStrings) {
+	        PizzaStore nypizzaStore = new NYPizzaStore();
+	        Pizza pizza = nypizzaStore.orderPizza(type);
+	        System.out.println("ordered a " + pizza.getName()+"\n");
+
+	        PizzaStore chpizzaStore = new CHPizzaStore();
+	        pizza = chpizzaStore.orderPizza(type);
+	        System.out.println("ordered a " + pizza.getName()+"\n");
+		}
     }
 }
